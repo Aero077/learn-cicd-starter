@@ -22,7 +22,7 @@ jobs:
         run: ./scripts/buildprod.sh
 
       - name: Set up gcloud
-        run: actions/setup-gcloud@v6
+        run: actions/setup-gcloud@v3
 
       - name: Publish to GCP
         run: gcloud builds submit --tag us-central1-docker.pkg.dev/subtle-seer-474220-r0/notely-ar-repo/notely:latest .
