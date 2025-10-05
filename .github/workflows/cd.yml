@@ -21,3 +21,6 @@ jobs:
       - name: Build the app
         run: ./scripts/buildprod.sh
 
+      - name: Publish to GCP
+        run: gcloud builds submit --tag us-central1-docker.pkg.dev/subtle-seer-474220-r0/notely-ar-repo/notely:latest .
+
